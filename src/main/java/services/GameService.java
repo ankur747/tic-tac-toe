@@ -24,8 +24,13 @@ public class GameService {
 
     public Boolean continuePlayingGame()
     {
-        if(getWinner() == null && game.getBoard().getEmptyCells()>=0)
+        if(getWinner() != null) {
+            System.out.println(getWinner());
+            return false;
+        }
+        else if(game.getBoard().getEmptyCells()>=0)
             return true;
+
         return false;
     }
 

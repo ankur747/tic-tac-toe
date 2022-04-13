@@ -34,7 +34,7 @@ public class App {
                 List<String> cellValues = Arrays.stream(input.split("\s")).toList();
                 try {
                     gameService.makeMove(Integer.parseInt(cellValues.get(0))-1,Integer.parseInt(cellValues.get(1))-1);
-                    if(gameService.continuePlayingGame())
+                    if(!gameService.continuePlayingGame())
                     {
                         System.out.println("Game Over.");
                         break;
